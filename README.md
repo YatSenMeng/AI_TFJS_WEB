@@ -22,55 +22,13 @@ npm install
 ```
 Link YOLOv5 weights directory into public directory:
 ```
-ln -s ../../yolov5/yolov5s_web_model public/web_model
+cp -r your_absolute_path/yolov5s_web_model your_absolute_path/AI_TFJS_WEB/public/web_model
 ```
-
-If the synlink is not working (For example on Ubuntu), you might have to use an absolute path:
-```
-ln -s <ABSOLUTE PATH>/yolov5/yolov5s_web_model <ABSOLUTE PATH>/public/web_model
-```
-
 Run YOLOv5 detection web service with:
 ```
 npm start
 ```
-
 ### Github Pages Depolyment
 Edit the `homepage` and `deploy` fields in `package.json` changing 
-```
-"homepage": "https://zldrobit.github.io/tfjs-yolov5-example",
-``` 
-to 
-```
-"homepage": "https://GITHUB_USERNAME.github.io/tfjs-yolov5-example",
-```
-and
-```
-"deploy": "gh-pages -d build --repo git@github.com:zldrobit/tfjs-yolov5-example.git"
-```
-to
-```
-"deploy": "gh-pages -d build --repo git@github.com:GITHUB_USERNAME/tfjs-yolov5-example.git"
-```
 
-
-Run
 ```
-npm run deploy
-```
-
-PS: <del> This repo assumes the model input resolution is 640x640. </del>
-If you change the `--img` value in exporting `*.pb`, change `modelWidth` and `modelHeight` in `src/index.js` accordingly.
-
-EDIT: 
-- Add github pages deployment support
-- Use GitHub project site (previously use GitHub User Page)
-
-## FAQ
-https://github.com/zldrobit/tfjs-yolov5-example/wiki/FAQ
-
-## Other resource
-Add yolov5 in the web using yolov5js: https://github.com/SkalskiP/yolov5js
-
-## Reference
-https://medium.com/hackernoon/tensorflow-js-real-time-object-detection-in-10-lines-of-code-baf15dfb95b2
