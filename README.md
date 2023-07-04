@@ -13,8 +13,8 @@ python export.py --weights yolov5s.pt --include tfjs
 ### Local Test
 After exported the tfjs model, clone this repo:
 ```
-git clone https://github.com/zldrobit/tfjs-yolov5-example.git
-cd tfjs-yolov5-example
+git clone https://github.com/YatSenMeng/AI_TFJS_WEB.git
+cd AI_TFJS_WEB
 ```
 Install packages with npm:
 ```
